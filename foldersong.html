@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Song</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #3498db, #8e44ad); /* Gradient from blue to purple */
+            color: #fff; /* White text color */
+            padding-top: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            color: #000; /* Black text color */
+        }
+
+        label {
+            color: #000; /* Black label text color */
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .link-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .link-container a {
+            color: #3498db; /* Blue link color */
+            text-decoration: underline;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .link-container a:hover {
+            color: #2980b9; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="addstring" method="post">
+            <label>Song name:</label>
+            <input type="text" name="name"><br>
+            <label>Song Artist:</label>
+            <input type="text" name="artist"><br>
+            <label>Song Genre:</label>
+            <input type="text" name="genre"><br>
+            <label>Song Link:</label>
+            <input type="text" name="link"><br>
+            <input type="submit" value="Add Song">
+        </form>
+        <div class="link-container">
+            <p>If you add all the songs in a folder <a href="aftersong">click here</a> to go to the create folder page.</p>
+        </div>
+    </div>
+</body>
+</html>

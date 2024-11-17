@@ -1,0 +1,136 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Links</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Center the links */
+        .center {
+            display: flex;
+            justify-content: center;
+            background-color:
+            height: 50vh;
+        }
+        h1{
+            display: flex;
+            justify-content: center;
+            
+            height: 50vh;
+        }
+    </style>
+</head>
+<body>
+<h1 >Welcome to User page</h1>
+    <div class="center">
+        <div>
+            <a href="viewfolder" class="btn btn-primary">View Folder</a><br><br>
+            <a href="viewusersong" class="btn btn-primary">View All Songs</a><br><br>
+            <a href="userplaylist" class="btn btn-primary">Create Playlist</a><br><br>
+            <a href="userviewplaylist" class="btn btn-primary">View Playlist</a>
+        </div>
+    </div>
+</body>
+</html>
+ -->
+ <!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Links</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+            background-color:  #a28089;
+        }
+        .head {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .head form {
+            display: flex;
+            align-items: center;
+        }
+        .head form input[type="text"] {
+            margin-right: 10px;
+            width:300px;
+        }
+        .head{
+            
+            height: 30vh;
+            background-color: #a0d2eb;
+        }
+        
+        .custom-link {
+            display: block;
+            margin-bottom: 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: #fff; 
+        }
+
+        .custom-link:nth-child(1) {
+            background-color: #007bff; 
+        }
+
+        .custom-link:nth-child(2) {
+            background-color: #28a745; 
+        }
+
+        .custom-link:nth-child(3) {
+            background-color: #fd7e14; 
+        }
+
+        .custom-link:nth-child(4) {
+            background-color: #6f42c1; 
+        }
+
+        .custom-link:hover {
+            opacity: 0.8;
+        }
+        .search-button{
+          background-color: #fd7e14; 
+        }
+        .search-button:hover{
+           opacity: 0.8;
+        }
+        
+    </style>
+</head>
+<body>
+<div class="head">
+    <h1>Welcome <span th:text=${user.username}></span></h1><br><br>
+<!--     <a href="logout">Logout</a>
+ -->    <form action="getfolder" method="get">   
+        <input type="text" id="search" name="q" placeholder="Search here for folder...">
+        <input type="submit" class="search-button" value="Search"></input>
+    </form><br>
+    <form action="getsong" method="get">   
+        <input type="text" id="search" name="q" placeholder="Search here for song...">
+        <input type="submit" class="search-button" value="Search"></input>
+    </form>
+</div> 
+    <div class="center">
+        <div style="background-color: #fff; padding: 20px; border-radius: 10px;">
+            <a href="viewfolder" class="custom-link">View Folder</a>
+            <a href="viewusersong" class="custom-link">View All Songs</a>
+            <a href="userplaylist" class="custom-link">Create Playlist</a>
+            <a href="userviewplaylist" class="custom-link">View Playlist</a>
+        </div>
+    </div>
+</body>
+</html>
+ 
